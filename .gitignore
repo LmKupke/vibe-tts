@@ -1,0 +1,45 @@
+# Dependencies, builds, and local tools
+node_modules/
+dist/
+.venv/
+venv/
+.impeccable/
+
+# Local configuration (only sanitized examples belong in Git)
+.env
+.env.*
+!.env.example
+*.local
+.npmrc
+.pypirc
+.netrc
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
+service-account*.json
+
+# Model weights and local audio/reference material
+models/
+checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Caches and generated test output
+.DS_Store
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+*.py[cod]
+*.egg-info/
+playwright-report/
+test-results/
+coverage/
+*.log

@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "types": ["chrome"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.test.ts"]
+}

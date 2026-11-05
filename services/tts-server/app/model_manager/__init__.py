@@ -1,0 +1,1 @@
+"""Lazy model lifecycle management."""

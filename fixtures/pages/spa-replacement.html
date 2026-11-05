@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SPA replacement</title>
+  </head>
+  <body>
+    <main id="app">
+      <h1>First route</h1>
+      <p>The original route has readable content.</p>
+    </main>
+    <button id="navigate" type="button">Replace route</button>
+    <script>
+      document.querySelector("#navigate").addEventListener("click", () => {
+        history.pushState({}, "", "/second");
+        document.querySelector("#app").innerHTML =
+          "<h1>Second route</h1><p>Fresh content must receive a fresh source map.</p>";
+      });
+    </script>
+  </body>
+</html>

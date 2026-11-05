@@ -1,0 +1,47 @@
+{
+  "name": "vibe-tts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Source-aware webpage narration with synchronized DOM highlighting",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @vibe-tts/shared && npm run build -w @vibe-tts/chrome-extension",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run test:server",
+    "dev": "npm run dev -w @vibe-tts/chrome-extension",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run build && playwright test",
+    "test:server": "uv run --project services/tts-server pytest services/tts-server/tests",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@playwright/test": "latest",
+    "@types/chrome": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "esbuild": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "jsdom": "latest",
+    "prettier": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

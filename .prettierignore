@@ -1,0 +1,6 @@
+dist
+.venv
+node_modules
+.impeccable
+package-lock.json
+services/tts-server/.pytest_cache

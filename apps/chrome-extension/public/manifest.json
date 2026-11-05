@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Vibe TTS — Read with the page",
+  "version": "0.1.0",
+  "description": "Reads primary webpage content aloud with synchronized sentence and word highlights.",
+  "minimum_chrome_version": "120",
+  "permissions": ["activeTab", "scripting", "sidePanel", "offscreen", "storage"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Vibe TTS"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "commands": {
+    "toggle-playback": {
+      "suggested_key": {
+        "default": "Alt+Shift+Space",
+        "mac": "MacCtrl+Shift+Space"
+      },
+      "description": "Play or pause reading"
+    },
+    "previous-sentence": {
+      "suggested_key": {
+        "default": "Alt+Shift+Left",
+        "mac": "MacCtrl+Shift+Left"
+      },
+      "description": "Previous sentence"
+    },
+    "next-sentence": {
+      "suggested_key": {
+        "default": "Alt+Shift+Right",
+        "mac": "MacCtrl+Shift+Right"
+      },
+      "description": "Next sentence"
+    },
+    "stop-reading": {
+      "suggested_key": {
+        "default": "Alt+Shift+Down",
+        "mac": "MacCtrl+Shift+Down"
+      },
+      "description": "Stop reading"
+    }
+  }
+}

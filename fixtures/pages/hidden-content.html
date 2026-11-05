@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hidden content</title>
+    <style>
+      .visually-gone {
+        position: absolute;
+        clip: rect(0 0 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>The reader should say this.</p>
+      <p hidden>Never say hidden text.</p>
+      <p aria-hidden="true">Never say aria hidden text.</p>
+      <p class="visually-gone">Never say clipped text.</p>
+    </main>
+  </body>
+</html>
